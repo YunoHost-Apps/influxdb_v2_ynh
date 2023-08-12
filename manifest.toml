@@ -28,6 +28,7 @@ ram.runtime = "1G"
 [install]
     [install.domain]
     type = "domain"
+    full_domain = true
 
     [install.init_main_permission]
     type = "group"
