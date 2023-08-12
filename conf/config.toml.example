@@ -1,0 +1,3 @@
+bolt-path = "__DATA_DIR__/influxd.bolt"
+engine-path = "__DATA_DIR__/engine"
+sqlite-path = "__DATA_DIR__/influxd.sqlite"
