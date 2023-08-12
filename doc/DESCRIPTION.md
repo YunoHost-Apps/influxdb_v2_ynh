@@ -1,5 +1,3 @@
-# InfluxDB v2
-
 InfluxDB is a time series database designed to handle high volumes of time-based data, such as metrics, events, and analytics from software, IoT devices, or other sources.
 
 ## Features
@@ -17,8 +15,6 @@ InfluxDB is a time series database designed to handle high volumes of time-based
 - **Community & Ecosystem**: Supported by a vast community, InfluxDB integrates with various tools and platforms. This includes connectors to Grafana, Google Data Studio, and more. It also offers InfluxDB Templates to share monitoring solutions with the community.
 
 - **User Interface**: A top-tier UI is provided, featuring a Data Explorer, dashboarding tools, and a script editor. This ensures quick data browsing, visualization, and Flux script development.
-
-- **Edge & Distributed Environments**: InfluxDB is optimized for edge and distributed environments, allowing data collection, processing, and analysis from edge devices.
 
 By leveraging InfluxDB v2, users can gain deeper insights from their time series data, ensuring efficient data analysis and visualization. Whether you're a developer looking for a streamlined platform or an organization aiming for data-driven decisions, InfluxDB v2 is the tool to consider.
 
