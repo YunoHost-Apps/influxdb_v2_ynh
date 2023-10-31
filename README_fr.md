@@ -46,7 +46,7 @@ En tirant parti d'InfluxDB v2, les utilisateurs peuvent obtenir des informations
 
 * Site officiel de l’app : <https://www.influxdata.com/>
 * Documentation officielle de l’admin : <https://docs.influxdata.com/influxdb/v2.0/>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_influxdb_v2>
+* YunoHost Store: <https://apps.yunohost.org/app/influxdb_v2>
 * Signaler un bug : <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
 
 ## Informations pour les développeurs

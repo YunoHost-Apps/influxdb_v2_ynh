@@ -48,7 +48,7 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 * Official app website: <https://www.influxdata.com/>
 * Official admin documentation: <https://docs.influxdata.com/influxdb/v2.0/>
-* YunoHost documentation for this app: <https://yunohost.org/app_influxdb_v2>
+* YunoHost Store: <https://apps.yunohost.org/app/influxdb_v2>
 * Report a bug: <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
 
 ## Developer info
