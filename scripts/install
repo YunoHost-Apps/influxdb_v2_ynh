@@ -98,7 +98,7 @@ ynh_script_progression --message="Configuring $app ..." --weight=30
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="msg=Listening"
 
 # First setup InfluxDB v2 using influx
-ynh_exec_as $app $install_dir/influx setup --force --skip-verify --name default --configs-path $install_dir/.influxdbv2/configs --host http://localhost:$port --bucket $influxdb_bucket_name --org $influxdb_org_name --username $admin --password $password --retention $influxdb_bucket_retention --token $influxdb_admin_token
+ynh_exec_as $app $install_dir/influx setup --force --skip-verify --name default --configs-path $install_dir/.influxdbv2/configs --host http://localhost:$port --bucket $influxdb_bucket_name --org $influxdb_org_name --username $admin --password "$password" --retention $influxdb_bucket_retention --token $influxdb_admin_token
 
 #=================================================
 # END OF SCRIPT
