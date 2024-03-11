@@ -31,8 +31,8 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
-	ynh_setup_source --dest_dir="$install_dir" --source_id=influxdb2 --keep=".influxdbv2/"
-	ynh_setup_source --dest_dir="$install_dir" --source_id=influx
+	ynh_setup_source --dest_dir="$install_dir" --source_id=influxdb2 --full_replace=1 --keep=".influxdbv2/"
+	ynh_setup_source --dest_dir="$install_dir" --source_id=influx --full_replace=1
 fi
 
 chmod -R 750 "$install_dir"
