@@ -16,8 +16,8 @@ source /usr/share/yunohost/helpers
 influxdb_admin_token=$(ynh_string_random --length=64 --filter='A-Za-z0-9-_')
 
 # Check if the retention value is valid
-if ! echo "$influxdb_bucket_retention" | grep -qE '^[0-9]+(ns|u|µ|ms|s|m|h|d|w)$'; then
-    ynh_die --message="Invalid retention value. It should be a number followed by a duration unit (ns, u, µ, ms, s, m, h, d, w)."
+if ! echo "$influxdb_bucket_retention" | grep -qE '^(0|[0-9]+(ns|u|µ|ms|s|m|h|d|w))$'; then
+    ynh_die --message="Invalid retention value. It should be either 0 (infinite) or a number followed by a duration unit (ns, u, µ, ms, s, m, h, d, w)."
 fi
 
 ynh_app_setting_set --app=$app --key=influxdb_org_name --value=$influxdb_org_name
@@ -98,7 +98,7 @@ ynh_script_progression --message="Configuring $app ..." --weight=30
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="msg=Listening"
 
 # First setup InfluxDB v2 using influx
-ynh_exec_as $app $install_dir/influx setup --force --skip-verify --name default --configs-path $install_dir/.influxdbv2/configs --host http://localhost:$port --bucket $influxdb_bucket_name --org $influxdb_org_name --username $admin --password $password --retention $influxdb_bucket_retention --token $influxdb_admin_token
+ynh_exec_as $app $install_dir/influx setup --force --skip-verify --name default --configs-path $install_dir/.influxdbv2/configs --host http://localhost:$port --bucket $influxdb_bucket_name --org $influxdb_org_name --username $admin --password "$password" --retention $influxdb_bucket_retention --token $influxdb_admin_token
 
 #=================================================
 # END OF SCRIPT
