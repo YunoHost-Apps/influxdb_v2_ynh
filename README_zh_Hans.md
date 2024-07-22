@@ -5,7 +5,7 @@
 
 # YunoHost 上的 InfluxDB v2
 
-[![集成程度](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![工作状态](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
 
 [![使用 YunoHost 安装 InfluxDB v2](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 

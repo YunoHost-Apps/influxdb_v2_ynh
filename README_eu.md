@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # InfluxDB v2 YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
 
 [![Instalatu InfluxDB v2 YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 

@@ -1,20 +1,20 @@
 <!--
-NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-NON debe editarse manualmente.
+N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# InfluxDB v2 para YunoHost
+# InfluxDB v2 untuk YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Tingkat integrasi](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
 
-[![Instalar InfluxDB v2 con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
+[![Pasang InfluxDB v2 dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
-*[Le este README en outros idiomas.](./ALL_README.md)*
+*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Este paquete permíteche instalar InfluxDB v2 de xeito rápido e doado nun servidor YunoHost.*  
-> *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
+> *Paket ini memperbolehkan Anda untuk memasang InfluxDB v2 secara cepat dan mudah pada server YunoHost.*  
+> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
-## Vista xeral
+## Ringkasan
 
 InfluxDB is a time series database designed to handle high volumes of time-based data, such as metrics, events, and analytics from software, IoT devices, or other sources.
 
@@ -38,29 +38,29 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 
 
-**Versión proporcionada:** 2.7.1~ynh1
+**Versi terkirim:** 2.7.1~ynh1
 
-## Capturas de pantalla
+## Tangkapan Layar
 
-![Captura de pantalla de InfluxDB v2](./doc/screenshots/influxdb_v2_data_explorer.png)
+![Tangkapan Layar pada InfluxDB v2](./doc/screenshots/influxdb_v2_data_explorer.png)
 
-## Documentación e recursos
+## Dokumentasi dan sumber daya
 
-- Web oficial da app: <https://www.influxdata.com/>
-- Documentación oficial para admin: <https://docs.influxdata.com/influxdb/v2.0/>
-- Tenda YunoHost: <https://apps.yunohost.org/app/influxdb_v2>
-- Informar dun problema: <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
+- Website aplikasi resmi: <https://www.influxdata.com/>
+- Dokumentasi admin resmi: <https://docs.influxdata.com/influxdb/v2.0/>
+- Gudang YunoHost: <https://apps.yunohost.org/app/influxdb_v2>
+- Laporkan bug: <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
 
-## Info de desenvolvemento
+## Info developer
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing).
 
-Para probar a rama `testing`, procede deste xeito:
+Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing --debug
-ou
+atau
 sudo yunohost app upgrade influxdb_v2 -u https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing --debug
 ```
 
-**Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
+**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>
