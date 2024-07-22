@@ -2,7 +2,7 @@ packaging_format = 2
 
 id = "influxdb_v2"
 name = "InfluxDB v2"
-description.en = "Time-series database for storing, querying, and visualizing real-time data efficiently."
+description.en = "Time-series database for storing, querying, and visualizing real-time data efficiently"
 description.fr = "Base de données séries temporelles pour stocker, interroger et visualiser données temps réel efficacement"
 
 version = "2.7.1~ynh1"

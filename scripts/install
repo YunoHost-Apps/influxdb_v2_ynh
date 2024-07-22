@@ -33,24 +33,7 @@ ynh_script_progression --message="Setting up source files..." --weight=1
 ynh_setup_source --dest_dir="$install_dir" --source_id=influxdb2
 ynh_setup_source --dest_dir="$install_dir" --source_id=influx
 
-chmod -R 750 "$install_dir"
-chown -R $app:$app "$install_dir"
-
-#=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --weight=1
-
-# Create a dedicated NGINX config
-ynh_add_nginx_config
-
-#=================================================
-# CONFIGURE DATA DIRECTORY
-#=================================================
-ynh_script_progression --message="Setting permissions for the data directory..." --weight=1
-
-chmod -R 0750 "$data_dir"
-chown -R $app:$app "$data_dir"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # ADD CONFIGURATION
@@ -63,38 +46,33 @@ chmod 400 "$install_dir/config.toml"
 chown $app:$app "$install_dir/config.toml"
 
 #=================================================
-# CONFIGURE SYSTEMD
+# SYSTEM CONFIGURATION
 #=================================================
-ynh_script_progression --message="Configuring a systemd service..." --weight=1
+ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
+
+# Create a dedicated NGINX config
+ynh_add_nginx_config
 
 # Create a dedicated systemd config
-ynh_add_systemd_config --service="$app" --template="systemd.service"
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
+ynh_add_systemd_config --service="$app" --description="Time-series database" --template="systemd.service"
 
 yunohost service add "$app" --log="/var/log/$app/$app.log"
+
+ynh_use_logrotate
 
 #=================================================
 # START AND ENABLE SYSTEMD SERVICE
 #=================================================
 ynh_script_progression --message="Starting a systemd service..." --weight=1
+
 ynh_systemd_action --service_name=$app --action="enable"
 ynh_systemd_action --service_name=$app --action="start"
-
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-
-ynh_script_progression --message="Configuring log rotation..." --weight=1
-ynh_use_logrotate
 
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
 ynh_script_progression --message="Configuring $app ..." --weight=30
+
 ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log" --line_match="msg=Listening"
 
 # First setup InfluxDB v2 using influx

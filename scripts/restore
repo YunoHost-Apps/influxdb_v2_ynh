@@ -16,8 +16,7 @@ ynh_script_progression --message="Restoring the app main directory..." --weight=
 
 ynh_restore_file --origin_path="$install_dir"
 
-chmod -R 750 "$install_dir"
-chown -R $app:$app "$install_dir"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # RESTORE THE DATA DIRECTORY
@@ -26,8 +25,7 @@ ynh_script_progression --message="Restoring the data directory..." --weight=1
 
 ynh_restore_file --origin_path="$data_dir" --not_mandatory
 
-chmod -R 0750 "$data_dir"
-chown -R $app:$app "$data_dir"
+chown -R "$app:www-data" "$data_dir"
 
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
@@ -35,15 +33,11 @@ chown -R $app:$app "$data_dir"
 ynh_script_progression --message="Restoring system configurations related to $app..." --weight=1
 
 ynh_restore_file --origin_path="/etc/nginx/conf.d/$domain.d/$app.conf"
+
 ynh_restore_file --origin_path="/etc/systemd/system/$app.service"
 ynh_systemd_action --service_name=$app --action="enable"
 
-yunohost service add "$app" --log="/var/log/$app/$app.log"
-
-#=================================================
-# RESTORE THE LOGROTATE CONFIGURATION AND LOGS
-#=================================================
-ynh_script_progression --message="Restoring the logrotate configuration..." --weight=1
+yunohost service add "$app" --description="Time-series database" --log="/var/log/$app/$app.log"
 
 ynh_restore_file --origin_path="/var/log/$app"
 chown -R $app:$app "/var/log/$app"
