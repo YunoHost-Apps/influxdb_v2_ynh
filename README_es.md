@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # InfluxDB v2 para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
 
 [![Instalar InfluxDB v2 con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
