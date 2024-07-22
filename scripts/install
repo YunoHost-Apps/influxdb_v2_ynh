@@ -54,9 +54,9 @@ ynh_script_progression --message="Adding system configurations related to $app..
 ynh_add_nginx_config
 
 # Create a dedicated systemd config
-ynh_add_systemd_config --service="$app" --description="Time-series database" --template="systemd.service"
+ynh_add_systemd_config --service="$app" --template="systemd.service"
 
-yunohost service add "$app" --log="/var/log/$app/$app.log"
+yunohost service add "$app" --description="Time-series database" --log="/var/log/$app/$app.log"
 
 ynh_use_logrotate
 
