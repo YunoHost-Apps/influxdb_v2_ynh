@@ -1,58 +1,52 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
 source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
 # REMOVE SYSTEM CONFIGURATIONS
 #=================================================
-# REMOVE SYSTEMD SERVICE 
-#=================================================
-ynh_script_progression --message="Removing system configurations related to $app..." --weight=1
+# REMOVE SYSTEMD SERVICE
 
-if ynh_exec_warn_less yunohost service status $app >/dev/null
+#=================================================
+ynh_script_progression "Removing system configurations related to $app..."
+
+if ynh_hide_warnings yunohost service status $app >/dev/null
 then
-	ynh_script_progression --message="Removing $app service integration..." --weight=1
+	ynh_script_progression "Removing $app service integration..."
 	yunohost service remove $app
 fi
 
 #=================================================
 # STOP AND REMOVE SERVICE
 #=================================================
-ynh_script_progression --message="Stopping and removing the systemd service..." --weight=1
-ynh_remove_systemd_config
+ynh_script_progression "Stopping and removing the systemd service..."
+ynh_config_remove_systemd
 
 #=================================================
 # REMOVE LOGROTATE CONFIGURATION
 #=================================================
-ynh_script_progression --message="Removing logrotate configuration..." --weight=1
-ynh_remove_logrotate
+ynh_script_progression "Removing logrotate configuration..."
+ynh_config_remove_logrotate
 
 #=================================================
 # REMOVE NGINX CONFIGURATION
 #=================================================
-ynh_script_progression --message="Removing NGINX web server configuration..." --weight=1
-ynh_remove_nginx_config
-
+ynh_script_progression "Removing NGINX web server configuration..."
+ynh_config_remove_nginx
 
 #=================================================
 # SPECIFIC REMOVE
 #=================================================
 # REMOVE VARIOUS FILES
 #=================================================
-ynh_script_progression --message="Removing InfluxDB V2 data" --weight=1
+ynh_script_progression "Removing InfluxDB V2 data"
 
-ynh_secure_remove --file="/var/log/$app"
-ynh_secure_remove --file="$data_dir"
+#REMOVEME? (Apps should not remove their log dir during remove ... this should only happen if --purge is used, and be handled by the core...) ynh_safe_rm "/var/log/$app"
+ynh_safe_rm "$data_dir"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Removal of $app completed" --last
+ynh_script_progression "Removal of $app completed"
