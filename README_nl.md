@@ -1,22 +1,22 @@
 <!--
-NOTA: Este README foi creado automáticamente por <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-NON debe editarse manualmente.
+NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Hij mag NIET handmatig aangepast worden.
 -->
 
-# InfluxDB v2 para YunoHost
+# InfluxDB v2 voor Yunohost
 
-[![Nivel de integración](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
-![Estado de funcionamento](https://apps.yunohost.org/badge/state/influxdb_v2)
-![Estado de mantemento](https://apps.yunohost.org/badge/maintained/influxdb_v2)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/influxdb_v2)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/influxdb_v2)
 
-[![Instalar InfluxDB v2 con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
+[![InfluxDB v2 met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
-*[Le este README en outros idiomas.](./ALL_README.md)*
+*[Deze README in een andere taal lezen.](./ALL_README.md)*
 
-> *Este paquete permíteche instalar InfluxDB v2 de xeito rápido e doado nun servidor YunoHost.*  
-> *Se non usas YunoHost, le a [documentación](https://yunohost.org/install) para saber como instalalo.*
+> *Met dit pakket kun je InfluxDB v2 snel en eenvoudig op een YunoHost-server installeren.*  
+> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
 
-## Vista xeral
+## Overzicht
 
 InfluxDB is a time series database designed to handle high volumes of time-based data, such as metrics, events, and analytics from software, IoT devices, or other sources.
 
@@ -40,29 +40,29 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 
 
-**Versión proporcionada:** 2.7.1~ynh2
+**Geleverde versie:** 2.7.1~ynh2
 
-## Capturas de pantalla
+## Schermafdrukken
 
-![Captura de pantalla de InfluxDB v2](./doc/screenshots/influxdb_v2_data_explorer.png)
+![Schermafdrukken van InfluxDB v2](./doc/screenshots/influxdb_v2_data_explorer.png)
 
-## Documentación e recursos
+## Documentatie en bronnen
 
-- Web oficial da app: <https://www.influxdata.com/>
-- Documentación oficial para admin: <https://docs.influxdata.com/influxdb/v2.0/>
-- Tenda YunoHost: <https://apps.yunohost.org/app/influxdb_v2>
-- Informar dun problema: <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
+- Officiele website van de app: <https://www.influxdata.com/>
+- Officiele beheerdersdocumentatie: <https://docs.influxdata.com/influxdb/v2.0/>
+- YunoHost-store: <https://apps.yunohost.org/app/influxdb_v2>
+- Meld een bug: <https://github.com/YunoHost-Apps/influxdb_v2_ynh/issues>
 
-## Info de desenvolvemento
+## Ontwikkelaarsinformatie
 
-Envía a túa colaboración á [rama `testing`](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing).
+Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing).
 
-Para probar a rama `testing`, procede deste xeito:
+Om de `testing`-branch uit te proberen, ga als volgt te werk:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing --debug
-ou
+of
 sudo yunohost app upgrade influxdb_v2 -u https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing --debug
 ```
 
-**Máis info sobre o empaquetado da app:** <https://yunohost.org/packaging_apps>
+**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>

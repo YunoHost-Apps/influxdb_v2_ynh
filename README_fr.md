@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # InfluxDB v2 pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/influxdb_v2)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/influxdb_v2)
 
 [![Installer InfluxDB v2 avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
@@ -36,7 +38,7 @@ InfluxDB est une base de données de séries temporelles conçue pour gérer des
 
 En tirant parti d'InfluxDB v2, les utilisateurs peuvent obtenir des informations plus approfondies sur leurs données de séries temporelles, en garantissant une analyse et une visualisation efficaces des données. Que vous soyez un développeur à la recherche d'une plateforme rationalisée ou une organisation visant à prendre des décisions basées sur les données, InfluxDB v2 est l'outil qu'il vous faut.
 
-**Version incluse :** 2.7.1~ynh1
+**Version incluse :** 2.7.1~ynh2
 
 ## Captures d’écran
 
