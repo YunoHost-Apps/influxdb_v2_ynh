@@ -48,7 +48,6 @@ ynh_remove_nginx_config
 #=================================================
 ynh_script_progression --message="Removing InfluxDB V2 data" --weight=1
 
-ynh_secure_remove --file="/var/log/$app"
 ynh_secure_remove --file="$data_dir"
 
 #=================================================
