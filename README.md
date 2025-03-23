@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # InfluxDB v2 for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Working status](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
+![Working status](https://apps.yunohost.org/badge/state/influxdb_v2)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/influxdb_v2)
 
 [![Install InfluxDB v2 with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
@@ -38,7 +40,7 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 
 
-**Shipped version:** 2.7.1~ynh1
+**Shipped version:** 2.7.1~ynh2
 
 ## Screenshots
 

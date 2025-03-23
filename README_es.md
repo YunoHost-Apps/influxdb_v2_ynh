@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # InfluxDB v2 para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
+![Estado funcional](https://apps.yunohost.org/badge/state/influxdb_v2)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/influxdb_v2)
 
 [![Instalar InfluxDB v2 con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
@@ -38,7 +40,7 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 
 
-**Versión actual:** 2.7.1~ynh1
+**Versión actual:** 2.7.1~ynh2
 
 ## Capturas
 
@@ -53,7 +55,7 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/influxdb_v2_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 

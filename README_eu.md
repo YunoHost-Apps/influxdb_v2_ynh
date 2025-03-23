@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # InfluxDB v2 YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/influxdb_v2.svg)](https://dash.yunohost.org/appci/app/influxdb_v2) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/influxdb_v2.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/influxdb_v2)](https://ci-apps.yunohost.org/ci/apps/influxdb_v2/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/influxdb_v2)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/influxdb_v2)
 
 [![Instalatu InfluxDB v2 YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=influxdb_v2)
 
@@ -38,7 +40,7 @@ By leveraging InfluxDB v2, users can gain deeper insights from their time series
 
 
 
-**Paketatutako bertsioa:** 2.7.1~ynh1
+**Paketatutako bertsioa:** 2.7.1~ynh2
 
 ## Pantaila-argazkiak
 
