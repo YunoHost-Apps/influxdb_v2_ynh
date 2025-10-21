@@ -6,4 +6,10 @@
 - [Lire le README en français](README_fr.md)
 - [Le o README en galego](README_gl.md)
 - [Baca README dalam bahasa bahasa Indonesia](README_id.md)
+<<<<<<< HEAD
+=======
+- [Lees de README in het Nederlands](README_nl.md)
+- [Przeczytaj README w języku polski](README_pl.md)
+- [Прочитать README на русский](README_ru.md)
+>>>>>>> 0dff3c71faf6e713b3302fd1b83ed12989baafe3
 - [阅读中文（简体）的 README](README_zh_Hans.md)
