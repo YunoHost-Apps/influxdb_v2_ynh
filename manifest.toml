@@ -4,7 +4,7 @@ packaging_format = 2
 
 id = "influxdb_v2"
 name = "InfluxDB v2"
-description.en = "Time-series database for storing, querying, and visualizing real-time data efficiently."
+description.en = "Time-series database for storing, querying, and visualizing real-time data efficiently"
 description.fr = "Base de données séries temporelles pour stocker, interroger et visualiser données temps réel efficacement"
 
 version = "2.7.1~ynh2"
@@ -18,7 +18,8 @@ admindoc = "https://docs.influxdata.com/influxdb/v2.0/"
 cpe = "cpe:2.3:a:influxdata:influxdb"
 
 [integration]
-yunohost = ">= 11.1.21"
+yunohost = ">= 11.2.18"
+helpers_version = "2.1"
 architectures = ["amd64", "arm64"]
 multi_instance = false
 
