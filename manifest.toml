@@ -18,13 +18,12 @@ admindoc = "https://docs.influxdata.com/influxdb/v2.0/"
 cpe = "cpe:2.3:a:influxdata:influxdb"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 12.1.17"
 helpers_version = "2.1"
 architectures = ["amd64", "arm64"]
 multi_instance = false
 
 ldap = false
-
 sso = false
 
 disk = "1G"
