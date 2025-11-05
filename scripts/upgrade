@@ -1,91 +1,48 @@
 #!/bin/bash
 
-#=================================================
-# GENERIC START
-#=================================================
-# IMPORT GENERIC HELPERS
-#=================================================
-
-source _common.sh
 source /usr/share/yunohost/helpers
-
-upgrade_type=$(ynh_check_app_version_changed)
-
-#=================================================
-# STANDARD UPGRADE STEPS
-#=================================================
 
 #=================================================
 # STOP SYSTEMD SERVICE
 #=================================================
-ynh_script_progression --message="Stopping a systemd service..." --weight=1
-ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app/$app.log"
+ynh_script_progression "Stopping $app's systemd service..."
 
-#=================================================
-# "REBUILD" THE APP (DEPLOY NEW SOURCES, RERUN NPM BUILD...)
+ynh_systemctl --service=$app --action="stop"
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
+ynh_script_progression "Upgrading source files..."
 
-if [ "$upgrade_type" == "UPGRADE_APP" ]
-then
-	ynh_script_progression --message="Upgrading source files..." --weight=1
+ynh_setup_source --dest_dir="$install_dir" --source_id=influxdb2 --keep=".influxdbv2/"
+ynh_setup_source --dest_dir="$install_dir" --source_id=influx
 
-	ynh_setup_source --dest_dir="$install_dir" --source_id=influxdb2 --keep=".influxdbv2/"
-	ynh_setup_source --dest_dir="$install_dir" --source_id=influx
-fi
+#=================================================
+# UPDATE A CONFIG FILE
+#=================================================
+ynh_script_progression "Updating $app's configuration files..."
 
-chmod -R 750 "$install_dir"
-chown -R $app:$app "$install_dir"
+ynh_config_add --template="config.toml.example" --destination="$install_dir/config.toml"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-#=================================================
-# NGINX CONFIGURATION
-#=================================================
-ynh_script_progression --message="Configuring NGINX web server..." --weight=1
+ynh_script_progression "Upgrading system configurations related to $app..."
 
 # Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_config_add_nginx
 
-#=================================================
-# ADD CONFIGURATION
-#=================================================
-ynh_script_progression --message="Adding $app configuration file..." --weight=1
+ynh_config_add_systemd
 
-ynh_add_config --template="config.toml.example" --destination="$install_dir/config.toml"
+yunohost service add "$app" --description="Time-series database" --log="/var/log/$app/$app.log"
 
-chmod 400 "$install_dir/config.toml"
-chown $app:$app "$install_dir/config.toml"
+ynh_systemctl --service=$app --action="enable"
+ynh_systemctl --service=$app --action="start"
 
-#=================================================
-# CONFIGURE SYSTEMD
-#=================================================
-ynh_script_progression --message="Configuring a systemd service..." --weight=1
-ynh_add_systemd_config --service="$app" --template="systemd.service"
-
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
-yunohost service add "$app" --log="/var/log/$app/$app.log"
-
-#=================================================
-# START AND ENABLE SYSTEMD SERVICE
-#=================================================
-ynh_script_progression --message="Starting a systemd service..." --weight=1
-ynh_systemd_action --service_name=$app --action="enable"
-ynh_systemd_action --service_name=$app --action="start"
-
-#=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Configuring log rotation..." --weight=1
-ynh_use_logrotate
+ynh_config_add_logrotate
 
 #=================================================
 # END OF SCRIPT
 #=================================================
 
-ynh_script_progression --message="Upgrade of $app completed" --last
+ynh_script_progression "Upgrade of $app completed"
